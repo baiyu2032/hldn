@@ -7,7 +7,7 @@
     <groupId>com.wzzm.springboot</groupId>
     <artifactId>hldn</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>pom</packaging>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -16,6 +16,7 @@
     </parent>
     <modules>
         <module>login</module>
+        <module>address</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -69,6 +70,13 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.47</version>
         </dependency>
-
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
