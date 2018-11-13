@@ -1,0 +1,27 @@
+2018-11-13 10:18:44.361  INFO 4296 --- [main] cn.LoginApplication                      : Starting LoginApplication on 炎 with PID 4296 (C:\Users\13654\Desktop\hldn\login\target\classes started by 13654 in C:\Users\13654\Desktop\hldn)
+2018-11-13 10:18:44.376  INFO 4296 --- [main] cn.LoginApplication                      : The following profiles are active: dev
+2018-11-13 10:18:48.404  WARN 4296 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[cn]' package. Please check your configuration.
+2018-11-13 10:18:48.603  INFO 4296 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-11-13 10:18:48.607  INFO 4296 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2018-11-13 10:18:48.733  INFO 4296 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43ms. Found 0 repository interfaces.
+2018-11-13 10:18:49.568  INFO 4296 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$70dfb899] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-13 10:18:51.062  INFO 4296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-11-13 10:18:51.134  INFO 4296 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-11-13 10:18:51.137  INFO 4296 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-13 10:18:51.145  INFO 4296 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_181\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.7.0_79\bin;C:\Program Files\Java\jdk1.7.0_79\jre\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Microsoft VS Code\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MySQL\MySQL Server 5.5\bin;D:\tomcat-7.0\bin;%CATALINA_HOME%\lib;%CATALINA_HOME%\bin;D:\Program Files\maven\bin;C:\Program Files\TortoiseSVN\bin;E:\Git\cmd;C:\Users\13654\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;D:\tomcat\bin;;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;.]
+2018-11-13 10:18:51.621  INFO 4296 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-11-13 10:18:51.622  INFO 4296 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6987 ms
+2018-11-13 10:18:51.677  INFO 4296 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-11-13 10:18:51.688  INFO 4296 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-13 10:18:51.689  INFO 4296 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-13 10:18:51.690  INFO 4296 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2018-11-13 10:18:51.690  INFO 4296 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-13 10:18:53.547  INFO 4296 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-13 10:18:54.996  INFO 4296 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-11-13 10:18:55.056  INFO 4296 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-11-13 10:18:55.070  INFO 4296 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-11-13 10:18:55.190  INFO 4296 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-13 10:18:55.194  INFO 4296 --- [main] cn.LoginApplication                      : Started LoginApplication in 12.934 seconds (JVM running for 20.589)
+2018-11-13 10:19:27.761  INFO 4296 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-13 10:19:27.762  INFO 4296 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2018-11-13 10:19:27.770  INFO 4296 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
