@@ -1,15 +1,17 @@
-#Ä¬ÈÏÊ¹ÓÃÅäÖÃ
+#é»˜è®¤ä½¿ç”¨é…ç½®
 spring:
   profiles:
     active: dev
 
-#¹«¹²ÅäÖÃÓëprofilesÑ¡ÔñÎŞ¹Ø mapperLocationsÖ¸µÄÂ·¾¶ÊÇsrc/main/resources
+#å…¬å…±é…ç½®ä¸profilesé€‰æ‹©æ— å…³ mapperLocationsæŒ‡çš„è·¯å¾„æ˜¯src/main/resources
 mybatis:
-  mapperLocations: classpath:mapper/*.xml
+
+
+  mapper-locations: classpath:mapper/*.xml
 
 ---
 
-#¿ª·¢ÅäÖÃ
+#å¼€å‘é…ç½®
 spring:
   profiles: dev
 
@@ -17,8 +19,7 @@ spring:
     url: jdbc:mysql://39.105.99.53:3306/shop?serverTimezone=GMT%2B8
     username: shop
     password: 123456
-    # Ê¹ÓÃdruidÊı¾İÔ´
-    type: com.alibaba.druid.pool.DruidDataSource
+    # ä½¿ç”¨druidæ•°æ®æº
     driver-class-name: com.mysql.jdbc.Driver
     filters: stat
     maxActive: 20
@@ -38,17 +39,17 @@ spring:
 
 spring:
   redis:
-    #Êı¾İ¿âË÷Òı
+    #æ•°æ®åº“ç´¢å¼•
     database: 0
     host: 127.0.0.1
     port: 6379
     jedis:
       pool:
-        #×î´óÁ¬½ÓÊı
+        #æœ€å¤§è¿æ¥æ•°
         max-active: 8
-        #×î´ó¿ÕÏĞ
+        #æœ€å¤§ç©ºé—²
         max-idle: 8
-        #×îĞ¡¿ÕÏĞ
+        #æœ€å°ç©ºé—²
         min-idle: 0
 ---
 spring:
@@ -62,34 +63,34 @@ spring:
 server:
   port: 8080
 
-# actuator¼à¿Ø
+# actuatorç›‘æ§
 management:
   server:
-    # ÉèÖÃ¼à¿Ø·şÎñ¶Ë¿Ú
+    # è®¾ç½®ç›‘æ§æœåŠ¡ç«¯å£
     port: 8081
   health:
     mail:
       enabled: false
   endpoints:
-    # ÉèÖÃ¶ËµãÊÇ·ñ¿ÉÓÃ Ä¬ÈÏÖ»ÓĞshutdown¿ÉÓÃ
+    # è®¾ç½®ç«¯ç‚¹æ˜¯å¦å¯ç”¨ é»˜è®¤åªæœ‰shutdownå¯ç”¨
     enabled-by-default: true
     web:
-      # ÉèÖÃÊÇ·ñ±©Â¶¶Ëµã Ä¬ÈÏÖ»ÓĞhealthºÍinfo¿É¼û
+      # è®¾ç½®æ˜¯å¦æš´éœ²ç«¯ç‚¹ é»˜è®¤åªæœ‰healthå’Œinfoå¯è§
       exposure:
-        # °üÀ¨ËùÓĞ¶Ëµã
-        include: "*" # ×¢ÒâĞèÒªÌí¼ÓÒıºÅ
-        # ÅÅ³ı¶Ëµã
+        # åŒ…æ‹¬æ‰€æœ‰ç«¯ç‚¹
+        include: "*" # æ³¨æ„éœ€è¦æ·»åŠ å¼•å·
+        # æ’é™¤ç«¯ç‚¹
         exclude: shutdown
 ---
+#é…ç½®æ—¥å¿—
 logging:
-  file: login/orcale.log
+  #é…ç½®æ—¥å¿—æ–‡ä»¶è·¯å¾„
+  level:
+    xatu.zsl: debug #ä¸åŒç›®å½•ä¸‹çš„æ—¥å¿—å¯é…ç½®ä¸åŒçº§åˆ«
+    org.springfromework.web: info
+    org.hibernate: error
+  #é‡‡ç”¨ç›¸å¯¹è·¯å¾„æ–¹å¼å°†æ—¥å¿—æ–‡ä»¶è¾“å‡ºåˆ°ã€log\myspringboot.logã€‘
+  file: log\myspringboot.log
 
-  #level: debug
 
 
-# ·ÖÒ³ÅäÖÃ
-pagehelper:
-  helper-dialect: mysql
-  reasonable: true
-  support-methods-arguments: true
-  params: count=countSql

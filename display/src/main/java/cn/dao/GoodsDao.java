@@ -38,7 +38,7 @@ public interface GoodsDao {
      * 分页显示所有电脑商品
      * @return
      */
-    List<Goods> getallgoods(@Param("index") int index, @Param("pagesize") int pagesize);
+    List<Goods> getallgoods();
 
     /**
      * 根据商品ID查询对应电脑

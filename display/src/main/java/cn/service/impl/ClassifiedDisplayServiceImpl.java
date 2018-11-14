@@ -6,9 +6,11 @@ import cn.pojo.Brand;
 import cn.pojo.Goods;
 import cn.service.ClassifiedDisplayService;
 import com.alibaba.fastjson.JSON;
+import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -16,6 +18,7 @@ import java.util.List;
  * 分类展示种类信息
  */
 @Repository("cdsi")
+@Transactional(rollbackFor = {RuntimeException.class})
 public class ClassifiedDisplayServiceImpl implements ClassifiedDisplayService {
     @Autowired
     @Qualifier("gd")
@@ -78,54 +81,6 @@ public class ClassifiedDisplayServiceImpl implements ClassifiedDisplayService {
         return s;
     }
 
-
-    int count;
-    /**
-     * 后驱总记录数
-     */
-    @Override
-    public void getcount() {
-        count=goodsDao.getcount();
-    }
-
-    /**
-     * 分页查询全部
-     *
-     * @param index 当前页吗
-     * @param page  每页页码
-     * @return
-     */
-    @Override
-    public String getallgoods(int index, int page) {
-        return null;
-    }
-
-    /**
-     * 分页查询全部
-     *
-     * @param index 当前页码
-     * @param page  每页页码
-     * @return
-     */
-//    @Override
-//    public String getallgoods(int index, int page) {
-//        Map<String,Object> map = new HashMap<String, Object>();
-//        PageUtil p=new PageUtil();
-//        p.setPageSize(page);
-//        if (count==0){
-//            getcount();
-//        }
-//        p.setTotalCount(count);
-//        System.out.println(count);
-//        p.setIndex(index);
-//        int Number = (index - 1) * p.getPageSize();
-//        p.setjList(goodsDao.getallgoods(Number,page));
-//        map.put("data",goodsDao.getallgoods(Number, page));
-//        map.put("page",index);
-//        String string = JSON.toJSONString(map);
-//        return string;
-//    }
-
     /**
      * 根据商品ID查询对应电脑
      *
@@ -136,6 +91,19 @@ public class ClassifiedDisplayServiceImpl implements ClassifiedDisplayService {
     public String getgoodsbyid(int gid) {
         Goods getgoodsbyid = goodsDao.getgoodsbyid(gid);
         String string = JSON.toJSONString(getgoodsbyid);
+        return string;
+    }
+
+    /**
+     * 分页显示所有电脑商品
+     *
+     * @return
+     */
+    @Override
+    public String getallgoods(int pagenum, int pagesize) throws Exception{
+        PageHelper.startPage(pagenum, pagesize);
+        List<Goods> getallgoods = goodsDao.getallgoods();
+        String string = JSON.toJSONString(getallgoods);
         return string;
     }
 }

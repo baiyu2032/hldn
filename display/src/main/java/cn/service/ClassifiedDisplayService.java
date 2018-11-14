@@ -1,5 +1,6 @@
 package cn.service;
 
+import cn.pojo.Goods;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -33,20 +34,14 @@ public interface ClassifiedDisplayService {
     String getallbrand();
 
     /**
-     * 后驱总记录数
-     */
-    void getcount();
-    /**
-     * 分页查询全部
-     * @param index  当前页吗
-     * @param page   每页页码
-     * @return
-     */
-    String getallgoods(int index, int page);
-    /**
      * 根据商品ID查询对应电脑
      * @param gid  商品ID
      * @return   电脑对象转换的json对象
      */
     String getgoodsbyid(@Param("gid") int gid);
+    /**
+     * 分页显示所有电脑商品
+     * @return
+     */
+    String getallgoods(int pagenum, int pagesize) throws Exception;
 }
