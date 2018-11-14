@@ -16,7 +16,7 @@
     </parent>
     <modules>
         <module>login</module>
-        <module>address</module>
+
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
