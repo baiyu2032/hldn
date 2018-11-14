@@ -3,14 +3,14 @@ package cn;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-@MapperScan("cn.dao")
-@EnableSwagger2
+
 @SpringBootApplication
-public class DemoApplication {
+@EnableSwagger2
+@MapperScan(value = "cn.dao")
+public class AddressApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DemoApplication.class, args);
+        SpringApplication.run(AddressApplication.class, args);
     }
 }

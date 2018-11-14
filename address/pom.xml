@@ -3,19 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
-    <artifactId>ShopCar</artifactId>
+    <groupId>cn</groupId>
+    <artifactId>address</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <dependencies>
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>2.9.0</version>
-        </dependency>
-    </dependencies>
     <packaging>jar</packaging>
 
-    <name>ShopCar</name>
+    <name>address</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
@@ -32,5 +25,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
