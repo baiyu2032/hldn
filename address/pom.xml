@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn</groupId>
-    <artifactId>display</artifactId>
+    <artifactId>address</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>display</name>
+    <name>address</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
@@ -17,26 +17,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-
-    <dependencies>
-    </dependencies>
-
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>mapper/*.xml</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>*.yml</include>
-                </includes>
-            </resource>
-        </resources>
-
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

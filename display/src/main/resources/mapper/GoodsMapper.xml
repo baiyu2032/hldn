@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--suppress ALL -->
+<mapper namespace="cn.dao.GoodsDao">
+	<resultMap type="cn.pojo.Goods" id="goodsandbrand">
+		<!--<result column="gid" property="gid"/>-->
+		<!--<result column="gname" property="gname"/>-->
+		<!--<result column="gimg" property="gimg"/>-->
+		<!--<result column="gsum" property="gsum"/>-->
+		<!--<result column="gmoney" property="gmoney"/>-->
+		<!--<result column="glogo" property="glogo"/>-->
+		<!--<result column="ginfo" property="ginfo"/>-->
+		<!--<result column="gnum" property="gnum"/>-->
+		<!--<result column="one" property="one"/>-->
+		<!--<result column="two" property="two"/>-->
+		<!--<result column="three" property="three"/>-->
+		<result column="gbra" property="gbra"/>
+		<association property="brand" javaType="cn.pojo.Brand">
+			<result column="bid" property="bid"/>
+			<result column="bname" property="bname"/>
+			<!--<result column="one" property="one"/>-->
+			<!--<result column="two" property="two"/>-->
+			<!--<result column="three" property="three"/>-->
+		</association>
+	</resultMap>
+	<select id="corres" resultType="cn.pojo.Goods">
+		select * from goods where gbra=#{gbra};
+	</select>
+	<select id="getbrand" resultMap="goodsandbrand">
+		select bname,bid from brand b ,goods g WHERE b.bid=g.gbra
+	</select>
+	<select id="findByName" resultType="cn.pojo.Goods" parameterType="cn.pojo.Goods">
+		select * from goods
+		<trim prefix="where" prefixOverrides="and|or">
+		<if test="gname != null">
+			gname like  CONCAT('%',#{gname},'%')
+		</if>
+		</trim>
+	</select>
+    <select id="getallgoods" resultType="cn.pojo.Goods">
+		select * from goods limit #{index},#{pagesize}
+	</select>
+	<select id="getcount" resultType="java.lang.Integer">
+		select count(0) from goods;
+	</select>
+    <select id="getgoodsbyid" resultType="cn.pojo.Goods">
+        select gname,gimg,gsum,gmoney,gbra,ginfo,gnum,glogo,ginfoimg from goods where gid=#{gid}
+    </select>
+</mapper>
