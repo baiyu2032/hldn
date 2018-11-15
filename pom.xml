@@ -15,7 +15,6 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <modules>
-        <module>login</module>
         <module>display</module>
         <module>ShopCar</module>
         <module>address</module>
