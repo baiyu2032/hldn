@@ -5,12 +5,12 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@SpringBootApplication
 @EnableSwagger2
+@SpringBootApplication
 @MapperScan(value = "cn.dao")
-public class LoginApplication {
+public class LogApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(LoginApplication.class, args);
+        SpringApplication.run(LogApplication.class, args);
     }
 }

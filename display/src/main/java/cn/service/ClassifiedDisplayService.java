@@ -1,6 +1,5 @@
 package cn.service;
 
-import cn.pojo.Goods;
 import org.apache.ibatis.annotations.Param;
 
 /**
