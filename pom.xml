@@ -77,7 +77,6 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.47</version>
         </dependency>
-
         <!--pojo-->
         <dependency>
             <groupId>pojo</groupId>
