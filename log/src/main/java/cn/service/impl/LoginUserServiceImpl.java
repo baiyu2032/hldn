@@ -2,7 +2,6 @@
 package cn.service.impl;
 
 import cn.dao.UserDao;
-
 import cn.pojo.User;
 import cn.service.LoginUserService;
 import cn.util.FourNumUtil;
