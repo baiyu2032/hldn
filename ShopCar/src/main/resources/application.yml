@@ -39,7 +39,7 @@ spring:
     redis:
       #数据库索引
       database: 0
-      host: 127.0.0.1
+      host: 39.106.162.133
       port: 6379
       jedis:
         pool:
@@ -49,6 +49,7 @@ spring:
           max-idle: 8
           #最小空闲
           min-idle: 0
+      password: 68546280
 ---
 spring:
   security:
